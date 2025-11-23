@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEVA</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+  </head>
+  <body id="alumno-perfil" class="body-miperfil">
+    <header>
+      <div class="left-section">
+        <a href="#">
+          <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+        </a>
+        <a href="/inicio_alumno" id="texto-nav">SEVA</a>
+      </div>
+      <div class="right-section">
+        <a href="/perfil-alumno" id="perfil-nav">Mi perfil</a>
+      </div>
+    </header>
+    <div class="container-miperfil">
+        <h1 class="titulo-miperfil">Mi Perfil</h1>
+        
+        <!-- Información Personal -->
+        <section class="personal-info-miperfil">
+          <h2 class="subtitulo-miperfil">Información Personal</h2>
+          <div class="info-miperfil">
+              <p class="label-miperfil">Nombre y apellido:</p>
+              <p class="input-miperfil">{{ nombre }}</p>
+
+              <p class="label-miperfil">Mail:</p>
+              <p class="input-miperfil">{{ email }}</p>
+
+          </div>
+        </section>
+
+        <!-- Mis Reservas -->
+        <section class="mis-materias-miperfil">
+          <h2 class="subtitulo-miperfil">Mis inscripciones</h2>
+          <table class="materias-table">
+          
+              {% for item in inscripciones %}
+              <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+              </tr>
+              {% endfor %}
+          </table>
+      </section>
+      
+
+      
+        <div class="btn-container-mp">
+          <form action="/logout" method="get">
+            <button  type="submit" class="cerrarcesion">Cerrar Sesión</button>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

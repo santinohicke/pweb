@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear usuario - ADMIN</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+  </head>
+  <body class="f-container">
+    <header>
+      <a href="#"
+        ><img src="../static/img/uca-logo.png" alt="Imagen" id="seva-img"
+        /></a>
+      <a href="/inicio_admin" id="texto-nav">SEVA</a>
+    </header>
+    <nav class="log-in">
+      <h1 id="h1-user">Crear Usuario</h1>
+      <form id="login-adm" action="/recibir_datos" method="post">
+        <select name="tipo_usuario">
+            <option value="">Tipo de Usuario</option>
+            <option value="Alumno">Alumno</option>
+            <option value="Profesor">Profesor</option>
+        </select>
+        <input type="email" name="email" placeholder="nombre@uca.edu.ar"/>
+        <input type="text" name="nombre_completo" placeholder="Nombre y Apellido"/>
+        <input type="password" name="contraseña" placeholder="Contraseña"/>
+        <input type="text" name="legajo" placeholder="Legajo"/>
+        <button type="submit">Guardar</button>
+      </form>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVA - Inscripción</title>
+    <link rel="stylesheet" href="../static/css/AAA-estilo.css">
+</head>
+<body class="container-inscribirse">
+   <header>
+      <div class="left-section">
+        <a href="#">
+          <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+        </a>
+        <a href="/inicio_alumno" id="texto-nav">SEVA</a>
+      </div>
+      <div class="right-section">
+        <a href="/perfil-alumno" id="perfil-nav">Mi perfil</a>
+      </div>
+    </header>
+    <main>
+        <h1 class="txt-inscribirse">Seleccionar en qué aula y comisión va a cursar</h1>
+        
+        <section class="subject">
+            
+            
+            <div class="class">
+                <table class="materias-table-alu" class="students">
+                    {% for item in comision %}
+                    <tr>
+                      <td>{{ item[0] }}</td>
+                      <td>{{ item[1] }}</td>
+                      <td>{{ item[2] }}</td>
+                      <td>{{ item[3] }}</td>
+                      <td>
+                        <form action="/inscripcion-ALUMNO" method="GET">
+                          <input type="hidden" name="materia" value="{{ item[0] }}">
+                          <input type="hidden" name="aula" value="{{ item[1] }}">
+                          <input type="hidden" name="dia" value="{{ item[2] }}">
+                          <input type="hidden" name="hora" value="{{ item[3] }}">
+                          <button type="submit" name="inscribirse">INSCRIBIRSE</button>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  
+                </table>
+            </div>
+            
+        </section>
+    </main>
+</body>
+</html>
