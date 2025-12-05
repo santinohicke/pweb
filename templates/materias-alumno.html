@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEVA</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+  </head>
+  <body class="container-materias-alprof">
+    <header>
+      <a href="#">
+        <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+      </a>
+      <a href="/inicio_alumno" id="texto-nav">SEVA</a>
+      <div class="right-section">
+            <a href="/perfil-alumno" id="perfil-nav">Mi perfil</a>
+        </div>
+    </header>
+    <main class="materias-a-p">
+      <form action="/inscribirse-alumno" method='GET'>
+        <section class="container-mat">
+          <div class="search-bar">
+            <input type="text" id="search-input" placeholder="🔍 Buscar..."  />
+          </div>
+          <ul id="materias-list">
+            {% for item in materias %}
+            <li>
+              <label for="">
+                <input type="checkbox" class="checkbox-mat" name="materias" value="{{item[0]}}">
+                {{item[0]}}
+              </label>
+            </li>
+            {%endfor%}
+          </ul>
+          <p id="no-results-message" style="display: none;">No se han encontrado resultados</p>
+          <button type="submit" class="boton_materias" id="submit-buttonP">
+            Siguiente
+          </button>
+        </section>
+      </form>
+      <script language="javascript" type="text/javascript" src="../static/js/materias.js"></script>
+    </main>
+  </body>
+</html>

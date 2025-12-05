@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Aulas</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+  </head>
+  <body class="materias-admin-body">
+    <header>
+      <div class="left-section">
+        <a href="#">
+          <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+        </a>
+        <a href="/inicio_admin" id="texto-nav">SEVA</a>
+      </div>
+      <div class="right-section">
+        <a href="/perfil-admin" id="perfil-nav">Mi perfil</a>
+      </div>
+    </header>
+    <main class="main-materias-alumno">
+      <form class="container-materias-admin" action="/modificacion-materia" method="post">
+        <table class="tabla-materias">
+          <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in materias %}
+            <tr>
+              <td>{{ item[0] }}</td>
+              <td>
+                <button type="submit" class="btn-eliminar" name="eliminar" value="{{ item[0] }}">Eliminar</button>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      
+        <a href="/agregar-materia" ac class="edit-link">Agregar Materia</a>
+      </form>
+      </div>
+    </main>
+  </body>
+</html>

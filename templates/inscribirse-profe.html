@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVA - Inscripción</title>
+    <link rel="stylesheet" href="../static/css/AAA-estilo.css">
+</head>
+<body class="body-insc-profe">
+   <header>
+      <div class="left-section">
+        <a href="#">
+          <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+        </a>
+        <a href="/inicio_profe" id="texto-nav">SEVA</a>
+      </div>
+      <div class="right-section">
+        <a href="/perfil-profesor" id="perfil-nav">Mi perfil</a>
+      </div>
+    </header>
+    <main>
+        <div class="container-inscribirse-profe">
+            <h1 class="txt-inscribirse">Seleccionar en qué día y horario se dará esta clase</h1>
+            <form action="/datos-inscripcion-profe" method="get">
+                <table class="tabla-inscripcion">
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {%for item in comision%}
+                            <td>{{item}}</td>
+                            {%endfor%}
+                            <td>
+                                <select name="día">
+                                    <option value="">Día</option>
+                                    <option value="lunes">Lunes</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miercoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="horario">
+                                    <option value="">Horario</option>
+                                    <option>08:00-10:00</option>
+                                    <option>10:00-12:00</option>
+                                    <option>12:00-14:00</option>
+                                    <option>14:00-16:00</option>
+                                    <option>16:00-18:00</option>
+                                </select>
+                            </td>
+                            <td><button type="submit" class="inscribirse-btn">Reservar</button></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+        </div>
+    </main>
+</body>
+</html>

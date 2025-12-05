@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Aula</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+</head>
+<body class="editar-aula-body">
+    <header>
+        <div class="left-section">
+            <a href="#">
+                <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+            </a>
+            <a href="/inicio_admin" id="texto-nav">SEVA</a>
+        </div>
+        <div class="right-section">
+            <a href="/perfil-admin" id="perfil-nav">Mi perfil</a>
+        </div>
+    </header>
+    <div class="container-editar-aula">
+        <h1>Editar Aula</h1>
+        <div class="form-content">
+            
+            <form id="form-editar-aula" action="/editar-aulas" method="get">
+                <div class="form-group">
+                    <label for="nombre-aula">Nombre del Aula:</label>
+                    <input type="text" id="nombre-aula" name="nombre-aula" required />
+                </div>
+                <div class="form-group">
+                    <label for="capacidad-aula">Capacidad:</label>
+                    <input type="number" id="capacidad-aula" name="capacidad-aula" required />
+                </div>
+                <div class="form-group">
+                    <label for="proyector-aula">Proyector:</label>
+                    <select id="proyector-aula" name="proyector-aula" required>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="computadoras-aula">Computadoras:</label>
+                    <select id="computadoras-aula" name="computadoras-aula" required>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="save-button">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

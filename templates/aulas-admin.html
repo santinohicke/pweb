@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Aulas</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+    
+  </head>
+  <body class="aulas-admin-body">
+    <header>
+      <div class="left-section">
+        <a href="#">
+          <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+        </a>
+        <a href="/inicio_admin" id="texto-nav">SEVA</a>
+      </div>
+      <div class="right-section">
+        <a href="/perfil-admin" id="perfil-nav">Mi perfil</a>
+      </div>
+    </header>
+    <div class="container-edificios-admin">
+      <table class="materias-table">
+        <thead>
+          <tr>
+            <th>AULA</th>
+            <th>CAPACIDAD</th>
+            <th>COMUPUTADORAS</th>
+            <th>PROYECTOR</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in aulas %}
+            <tr>
+              <td>{{ item[1] }}</td>
+              <td>{{ item[2] }}</td>
+              <td>{{ item[3] }}</td>
+              <td>{{ item[4] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+      <a href="/agregar-aulas-admin" class="edit-link">Agregar Aula</a>
+      
+    </div>
+  </body>
+</html>

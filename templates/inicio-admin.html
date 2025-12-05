@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEVA</title>
+    <link rel="stylesheet" href="../static/css/AAA-styles.css" />
+</head>
+<body class="home-body-admin">
+    <header>
+        <div class="left-section">
+            <a href="#">
+                <img src="../static/img/uca-logo.png" alt="seva-img" id="seva-img" />
+            </a>
+            <a href="/inicio_admin" id="texto-nav">SEVA</a>
+        </div>
+        <div class="right-section">
+            <a href="/perfil-admin" id="perfil-nav">Mi perfil</a>
+        </div>
+    </header>
+    <div class="main-content-home">
+        <h1 class="txt-bienv">Bienvenido al SEVA</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Materias</h2>
+                <p>Administra las materias</p>
+                <button class="btn-dashboard" onclick="location.href='/materias-admin'">Ver Materias</button>
+            </div>
+            <div class="card">
+                <h2>Usuarios</h2>
+                <p>Crear usuarios</p>
+                <button class="btn-dashboard" onclick="location.href='/creacion_alumnos_admin'">Ver Usuarios</button>
+            </div>
+            <div class="card">
+                <h2>Aulas Disponibles</h2>
+                <p>Adminstra las aulas</p>
+                <button class="btn-dashboard" onclick="location.href='/aulas-admin'">Ver Aulas</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
